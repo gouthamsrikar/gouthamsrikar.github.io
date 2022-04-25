@@ -1,1 +1,0 @@
-# gouthamsrikar.github.io

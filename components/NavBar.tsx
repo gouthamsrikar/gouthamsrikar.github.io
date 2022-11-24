@@ -12,10 +12,6 @@ const NavBar = () => {
 
     return (
         <div className='fixed w-full h-20 shadow-xl z-[100] items-center bg-white'>
-            {/* <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-
-            </div> */}
-
             <div className='h-full'>
 
                 <ul className='hidden md:flex justify-center px-5 py-7'>
@@ -31,10 +27,10 @@ const NavBar = () => {
                     <Link href='/#experience'>
                         <li className='ml-10 text-sm uppercase hover:border-b'>experience</li>
                     </Link>
-                    <Link href='/'>
+                    {/* <Link href='/'>
                         <li className='ml-10 text-sm uppercase hover:border-b'>Projects</li>
-                    </Link>
-                    <Link href='/'>
+                    </Link> */}
+                    <Link href='/#contact'>
                         <li className='ml-10 text-sm uppercase hover:border-b'>contact</li>
                     </Link>
                 </ul>
@@ -45,7 +41,7 @@ const NavBar = () => {
                 </div>
             </div>
 
-            <div className={nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 ease-in duration-300" : "ease-in duration-300"}>
+            <div className={nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 ease-in duration-300" : "ease-in duration-300 bg-transparent"}>
                 <div className={nav ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-6 ease-in duration-500" : "fixed left-[-100%] top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-6 ease-in duration-500"}>
                     <div className='flex w-full items-center justify-end'>
                         <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
@@ -53,25 +49,25 @@ const NavBar = () => {
                         </div>
                     </div>
                     <div className='border-b border-gray-300 my-4'>
-                        <p className='w-[85%] md:w-[90%] py-4'>making something people want always</p>
+                        <p className='w-[85%] md:w-[90%] py-4'>building something people want</p>
                     </div>
                     <div className='py-4'>
                         <ul className='uppercase'>
-                            <Link href='/'>
+                            <Link href='/' onClick={handleNav}>
                                 <li className='py-4 text-sm'>Home</li>
                             </Link>
-                            <Link href='/'>
+                            <Link href='/#about' onClick={handleNav}>
                                 <li className='py-4 text-sm'>About</li>
                             </Link>
 
-                            <Link href='/'>
+                            <Link href='/#skills' onClick={handleNav}>
                                 <li className='py-4 text-sm'>Skills</li>
                             </Link>
 
-                            <Link href='/'>
-                                <li className='py-4 text-sm'>Projects</li>
+                            <Link href='/#experience' onClick={handleNav}>
+                                <li className='py-4 text-sm'>experience</li>
                             </Link>
-                            <Link href='/'>
+                            <Link href='/#contact'>
                                 <li className='py-4 text-sm'>Contacts</li>
                             </Link>
                         </ul>

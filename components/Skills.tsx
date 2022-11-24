@@ -1,42 +1,48 @@
 import React from 'react'
 import { IconType } from 'react-icons/lib'
-import { SiFlutter, SiDart, SiReact, SiTailwindcss, SiCplusplus, SiGo, SiGit, SiFirebase, SiMongodb } from 'react-icons/si'
+import { SiFlutter, SiDart, SiReact, SiTailwindcss, SiCplusplus, SiGo, SiGit, SiFirebase, SiMongodb, SiTypescript } from 'react-icons/si'
 
 
 const Skills = () => {
     return (
-        <div id='skills' className="items-center flex px-8 justify-between">
+        <div id='skills' className="items-center px-8 justify-between md:h-screen">
+            <div className='h-20'></div>
+            <h1 >SKILLS</h1>
+            <div className='w-[100%] '>
+                <div className='md:flex justify-between'>
+                    <SkillsCategory
+                        categoryName='PROGRAMMING LANGUAGES'
+                        skills={[
+                            { title: "dart", icon: SiDart, percentage: 80 },
+                            { title: "go", icon: SiGo, percentage: 60 },
+                            { title: "c++", icon: SiCplusplus, percentage: 60 },
+                            { title: "typescript", icon: SiTypescript, percentage: 60 },
+                        ]} />
+                    <SkillsCategory
+                        categoryName='FRONTEND'
+                        skills={[
+                            { title: "flutter", icon: SiFlutter, percentage: 80 },
+                            { title: "react", icon: SiReact, percentage: 60 },
+                            { title: "tailwind css", icon: SiTailwindcss, percentage: 60 },
+                        ]} />
+                </div>
 
-            <div className='w-[100%] h-screen'>
-                <div className='h-20'></div>
-                <h1 >SKILLS</h1>
-                <div className='py-2'></div>
-                <h3 >PROGRAMMING LANGUAGES</h3>
-                <div className='py-2'>
-                    <SkillItem title={"dart"} icon={SiDart} percentage={80} />
-                    <SkillItem title={"go"} icon={SiGo} percentage={60} />
-                    <SkillItem title={"c++"} icon={SiCplusplus} percentage={60} />
-                </div>
-                <div className='py-2'></div>
-                <h3 className='py-1'>FRONTEND</h3>
-                <div className='py-2'>
-                    <SkillItem title={"flutter"} icon={SiFlutter} percentage={80} />
-                    <SkillItem title={"react"} icon={SiReact} percentage={20} />
-                    <SkillItem title={"tailwind css"} icon={SiTailwindcss} percentage={20} />
-                </div>
-                <div className='py-2'></div>
+                <div className='md:flex justify-between'>
 
-                <h3 >BACKEND</h3>
-                <div className='py-2'>
-                    <SkillItem title={"gofiber"} icon={SiGo} percentage={60} />
-                    <SkillItem title={"gin"} icon={SiGo} percentage={60} />
-                </div>
-                <div className='py-2'></div>
-                <h3 >OTHER</h3>
-                <div className='py-2'>
-                    <SkillItem title={"git"} icon={SiGit} percentage={60} />
-                    <SkillItem title={"firebase"} icon={SiFirebase} percentage={70} />
-                    <SkillItem title={"mongo DB"} icon={SiMongodb} percentage={30} />
+                    <SkillsCategory
+                        categoryName='FRONTEND'
+                        skills={[
+                            { title: "gofiber", icon: SiGo, percentage: 80 },
+                            { title: "gin", icon: SiGo, percentage: 60 },
+                            { title: "firebase", icon: SiFirebase, percentage: 60 },
+                            { title: "mongo DB", icon: SiMongodb, percentage: 60 },
+                        ]} />
+                    <SkillsCategory
+                        categoryName='OTHER SKILLS'
+                        skills={[
+                            { title: "git", icon: SiGit, percentage: 80 },
+                        ]} />
+
                 </div>
             </div>
 
@@ -44,6 +50,30 @@ const Skills = () => {
         </div>
     )
 }
+
+
+type SkillsCategoryProps = {
+    categoryName: string
+    skills: SkillItemProps[]
+}
+
+
+const SkillsCategory = (props: SkillsCategoryProps) => {
+    return (
+        <div className='w-full md:w-[45%]'>
+            <div className='py-2'></div>
+            <h3 className='font-bold'>{props.categoryName}</h3>
+            <div className='py-2'>
+                {
+                    props.skills.map((e) => <SkillItem key="skillitem" title={e.title} icon={e.icon} percentage={e.percentage} />)
+                }
+            </div>
+        </div>
+
+    )
+}
+
+
 
 type SkillItemProps = {
     title: String

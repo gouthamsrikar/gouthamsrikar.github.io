@@ -2,14 +2,14 @@ import React from 'react'
 
 const Main = () => {
     return (
-        <div className='w-full h-screen items-center grid-cols-1'>
+        <div className='w-full h-screen items-center grid-cols-1 '>
 
 
             <div className='max-w-[1240px] w-full h-[50%] mx-auto p-2 flex justify-center items-center'>
                 <div >
-                    <p className='uppercase text-sm tracking-widest'>MAKING SOMETHING PEOPLE WANT</p>
+                    <p className='uppercase text-sm tracking-widest'>BUILDING SOMETHING PEOPLE WANT</p>
                     <h1>
-                        Hi, I'm <span className='text-gray-500'>Goutham</span>
+                        Hi, I&apos;m <span className='text-gray-500'>Goutham</span>
                     </h1>
 
                     <p className='uppercase text-sm tracking-widest py-4'>developer \ photographer \ artist</p>

@@ -15,7 +15,7 @@ const NavBar = () => {
             <div className='h-full'>
 
                 <ul className='hidden md:flex justify-center px-5 py-7'>
-                    <Link href='/'>
+                    <Link href='/' >
                         <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
                     </Link>
                     <Link href='/#about'>
@@ -44,8 +44,8 @@ const NavBar = () => {
             <div className={nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 ease-in duration-300" : "ease-in duration-300 bg-transparent"}>
                 <div className={nav ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-6 ease-in duration-500" : "fixed left-[-100%] top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-6 ease-in duration-500"}>
                     <div className='flex w-full items-center justify-end'>
-                        <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
-                            <AiOutlineClose />
+                        <div onClick={handleNav} className='rounded-full shadow-lg hover:rotate-90  transition duration-1000 shadow-gray-400 p-3 cursor-pointer'>
+                            <AiOutlineClose  />
                         </div>
                     </div>
                     <div className='border-b border-gray-300 my-4'>

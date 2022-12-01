@@ -92,9 +92,9 @@ const SkillItem = (props: SkillItemProps) => {
                 </div>
             </div>
             <div className='w-full h-[10px] border border-black items-center p-[1px]'>
-                <div className='h-[6px] bg-black' style={{
-                    width: `${props.percentage}%`
-                }}>
+                <div className='h-[6px] bg-black transition duration-300' 
+                style={{  width: `${props.percentage}%`}}
+                >
                 </div>
             </div>
         </div>

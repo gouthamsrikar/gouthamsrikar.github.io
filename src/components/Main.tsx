@@ -7,9 +7,9 @@ const Main = () => {
 
             <div className='max-w-[1240px] w-full h-[50%] mx-auto p-2 flex justify-center items-center'>
                 <div >
-                    <p className='uppercase text-sm tracking-widest'>BUILDING SOMETHING PEOPLE WANT</p>
-                    <h1>
-                        Hi, I&apos;m <span className='text-gray-500'>Goutham</span>
+                    <p className='uppercase  tracking-widest text-xl'>BUILDING SOMETHING PEOPLE WANT</p>
+                    <h1 className='text-5xl'>
+                        Hi, I&apos;m <span className='text-gray-500 transition-all duration-1000'>Goutham</span>
                     </h1>
 
                     <p className='uppercase text-sm tracking-widest py-4'>developer \ photographer \ artist</p>

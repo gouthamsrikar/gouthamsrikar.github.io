@@ -5,9 +5,9 @@ import { SiFlutter, SiDart, SiReact, SiTailwindcss, SiCplusplus, SiGo, SiGit, Si
 
 const Skills = () => {
     return (
-        <div id='skills' className="items-center px-8 justify-between md:h-screen">
+        <div id='skills' className="items-center px-8 justify-between md:h-screen">  
             <div className='h-20'></div>
-            <h1 >SKILLS</h1>
+            <h1 className='pr-6 text-7xl'>SKILLS</h1 >
             <div className='w-[100%] '>
                 <div className='md:flex justify-between'>
                     <SkillsCategory
@@ -30,7 +30,7 @@ const Skills = () => {
                 <div className='md:flex justify-between'>
 
                     <SkillsCategory
-                        categoryName='FRONTEND'
+                        categoryName='BACKEND'
                         skills={[
                             { title: "gofiber", icon: SiGo, percentage: 80 },
                             { title: "gin", icon: SiGo, percentage: 60 },

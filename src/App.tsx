@@ -16,12 +16,21 @@ function App() {
 
   const sliderRef = useRef<SwiperCore.SwiperRef>(null);
 
-  useEffect(() => { }, [sliderRef])
+  const [bgColor, setBgColor] = useState(true)
+
+  
 
   return (
     <div className="App">
-      <div className='h-full w-full  bg-white '>
-        <NavBar swiperRef={sliderRef.current!} />
+      <div className='h-full w-full bg-white' >
+        <NavBar onchange={(i)=>{
+                        sliderRef.current?.swiper.slideTo(i)
+        }} />
+        {/* <Main />
+            <About /> */}
+
+
+
         <Swiper
           ref={sliderRef}
           direction={"vertical"}
@@ -31,6 +40,14 @@ function App() {
           width={window.innerWidth}
           height={window.innerHeight}
           speed={1000}
+          onChange={() => {
+            if ((sliderRef.current?.swiper.activeIndex ?? 0) / 2 === 0) {
+              setBgColor(false)
+            }else{
+              setBgColor(true)
+            }
+          }}
+          onActiveIndexChange={(e)=>{}}
           modules={[Mousewheel]}
           className="mySwiper"
         >

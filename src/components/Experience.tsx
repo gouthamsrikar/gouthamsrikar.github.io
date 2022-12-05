@@ -9,7 +9,7 @@ const Experience = () => {
 
             <img className='md:hidden' src="https://cdnb.artstation.com/p/assets/images/images/056/447/131/large/goutham-srikar-asset.jpg?1669256740" alt="" />
             <div className='h-5'></div>
-            <h1 >EXPERIENCE</h1>
+            <h1 className='text-7xl' >EXPERIENCE</h1>
             <div className='py-2 items-stretch'></div>
             <ExperienceItem org='Farmako Healthcare (YC S20)' position='SDE INTERN' skills={["flutter", "go"]} info='Worked on Clinic and Digital Lab Apps' link="https://farmako.in" timeline='JUN 2021 - MAR 2022' />
             <ExperienceItem org='Credito' position='SDE INTERN' skills={["flutter", "firebase", "go"]} info='Developed the MVP credito app for sharing credit card with friends' link="https://farmako.in" timeline='DEC 2021 - JAN 2022' />

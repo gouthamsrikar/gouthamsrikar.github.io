@@ -3,9 +3,10 @@ import React, { useState } from 'react'
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai'
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
 import SwiperCore, { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect } from 'react';
 
 type NavBarProps = {
-    swiperRef: SwiperCore.SwiperRef
+    onchange: (index: number) => void
 }
 
 const NavBar = (props: NavBarProps) => {
@@ -15,6 +16,7 @@ const NavBar = (props: NavBarProps) => {
         setNav(!nav)
     }
 
+
     return (
         <div className='fixed w-full h-20 transition-shadow duration-1000 hover:shadow-xl z-[100] items-center bg-white'>
             <div className='h-full'>
@@ -22,19 +24,19 @@ const NavBar = (props: NavBarProps) => {
                 <ul className='hidden md:flex justify-center px-5 py-7'>
 
                     <div onClick={() => {
-                        props.swiperRef.swiper.slideTo(0)
+                        props.onchange(0)
                     }} className='ml-10 text-sm uppercase hover:border-b cursor-pointer'>Home</div>
                     <div onClick={() => {
-                        props.swiperRef.swiper.slideTo(1)
+                        props.onchange(1)
                     }} className='ml-10 text-sm uppercase hover:border-b cursor-pointer'>About</div>
                     <div onClick={() => {
-                        props.swiperRef.swiper.slideTo(2)
+                        props.onchange(2)
                     }} className='ml-10 text-sm uppercase hover:border-b cursor-pointer'>Skills</div>
                     <div onClick={() => {
-                        props.swiperRef.swiper.slideTo(3)
+                        props.onchange(3)
                     }} className='ml-10 text-sm uppercase hover:border-b cursor-pointer'>experience</div>
                     <div onClick={() => {
-                        props.swiperRef.swiper.slideTo(4)
+                        props.onchange(4)
                     }} className='ml-10 text-sm uppercase hover:border-b cursor-pointer'>contact</div>
                 </ul>
 

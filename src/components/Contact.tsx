@@ -7,7 +7,7 @@ const Contact = () => {
         <div id='contact' className="pl-8 pt-80 h-screen place-content-end md:flex col-auto md:justify-around">
 
             <div >
-                <h1>Let&apos;s Connect</h1>
+                <h1 className='text-2xl'>Let&apos;s Connect</h1>
                 <div className='flex items-center justify-between my-2 w-[100px]'>
 
                     <div className='py-2 cursor-pointer ' >

@@ -7,9 +7,9 @@ const About = () => {
             <img src="https://avatars.githubusercontent.com/u/53181084?v=4" alt="" className='xl:mx-5'/>
             <div className='max-w-[1240px] m-auto md:grid grid-cols-1 gap-8'>
                 <div className='col-span-2 '>
-                    <p className='py-3'>About me</p>
-                    <h2>Who am I ?</h2>
-                    <h3 className='py-3'>I&apos;m a PANDA 🐼</h3>
+                    <p className='py-3 text-4xl'>About me</p>
+                    <h2>Who am I ??</h2>
+                    <h3 className='py-3 text-2xl'>I&apos;m a PANDA 🐼</h3>
                     <p>
                         I am currently in final year of
                         Applied Mathematics at IIT ROORKEE.

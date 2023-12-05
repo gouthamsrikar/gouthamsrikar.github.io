@@ -18,13 +18,13 @@ function App() {
 
   const [bgColor, setBgColor] = useState(true)
 
-  
+
 
   return (
     <div className="App">
-      <div className='h-full w-full bg-white' >
-        <NavBar onchange={(i)=>{
-                        sliderRef.current?.swiper.slideTo(i)
+      <div className='h-full w-full bg-white font-Grot' >
+        <NavBar onchange={(i) => {
+          sliderRef.current?.swiper.slideTo(i)
         }} />
         {/* <Main />
             <About /> */}
@@ -43,11 +43,11 @@ function App() {
           onChange={() => {
             if ((sliderRef.current?.swiper.activeIndex ?? 0) / 2 === 0) {
               setBgColor(false)
-            }else{
+            } else {
               setBgColor(true)
             }
           }}
-          onActiveIndexChange={(e)=>{}}
+          onActiveIndexChange={(e) => { }}
           modules={[Mousewheel]}
           className="mySwiper"
         >

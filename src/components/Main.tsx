@@ -15,9 +15,16 @@ const Main = () => {
                     <p className='uppercase text-sm tracking-widest py-4'>developer \ photographer \ artist</p>
                 </div>
             </div>
-            <img src="https://cdna.artstation.com/p/assets/images/images/048/770/166/medium/goutham-srikar-asset.jpg?1650905213" alt="" className='w-full' />
-            <div className=' mx-auto p-2 flex justify-center items-center'>
-                <p className='uppercase text-sm tracking-widest'>Chasing angels or fleeing demons, go to the mountains</p>
+            <div className='flex justify-center'>
+                <img src={require('../assets/sissu.jpg')} alt="sissu" className='h-80 justify-center' />
+            </div>
+
+            {/* <img src="https://cdna.artstation.com/p/assets/images/images/048/770/166/medium/goutham-srikar-asset.jpg?1650905213" alt="" className='w-full' /> */}
+            <div className=' mx-auto my-3 flex justify-center items-center  '>
+                <div className='px-5 py-1 bg-black bg-opacity-75 bottom-3'>
+                    <p className='uppercase text-sm text-white tracking-widest'>Chasing angels or fleeing demons, go to the mountains</p>
+                </div>
+
 
             </div>
 

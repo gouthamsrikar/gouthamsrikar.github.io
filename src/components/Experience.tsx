@@ -15,12 +15,12 @@ const Experience = () => {
             <div className='py-2 items-stretch'></div>
 
             <div className='grid-cols-3 grid my-7 px-8'>
-                <ExperienceItem org='Farmako Healthcare (YC S20)' position='SDE INTERN' skills={["flutter", "go"]} info='Worked on Clinic and Digital Lab Apps' link="https://farmako.in" timeline='JUN 2021 - MAR 2022' />
-                <ExperienceItem org='Credito' position='SDE INTERN' skills={["flutter", "firebase", "go"]} info='Developed the MVP credito app for sharing credit card with friends' link="https://farmako.in" timeline='DEC 2021 - JAN 2022' />
-                <ExperienceItem org='Tezsure' position='SDE INTERN' skills={["flutter", "c++"]} info='Part of the naan wallet 2.0 team and worked on various features including nft gallery,tezos news etc.' link="https://tezsure.com/" timeline='JULY 2021 - OCT 2022' />
-                <ExperienceItem org='Kindly Health (YC W22)' position='SDE INTERN' skills={["flutter", "react",]} info='Worked on KindlyHis mobile application' link="https://www.kindlyhealth.com/" timeline='OCT 2022 - DEC 2022' />
-                <ExperienceItem org='Emint 1729' position='SDE-1' skills={["flutter",]} info='Worked on Emint mobile application and Main website' link="https://www.emint.co.in/" timeline='DEC 2022 - AUG 2023' />
                 <ExperienceItem org='Equal' position='SDE-1' skills={["flutter", "java"]} info='Worked on Equal Identity Gateway' link="https://www.equal.in/" timeline='SEP 2023 - PRESENT' />
+                <ExperienceItem org='Emint 1729' position='SDE-1' skills={["flutter",]} info='Worked on Emint mobile application and Main website' link="https://www.emint.co.in/" timeline='DEC 2022 - AUG 2023' />
+                <ExperienceItem org='Kindly Health (YC W22)' position='SDE INTERN' skills={["flutter", "react",]} info='Worked on KindlyHis mobile application' link="https://www.kindlyhealth.com/" timeline='OCT 2022 - DEC 2022' />
+                <ExperienceItem org='Tezsure' position='SDE INTERN' skills={["flutter", "c++"]} info='Part of the naan wallet 2.0 team and worked on various features including nft gallery,tezos news etc.' link="https://tezsure.com/" timeline='JULY 2021 - OCT 2022' />
+                <ExperienceItem org='Credito' position='SDE INTERN' skills={["flutter", "firebase", "go"]} info='Developed the MVP credito app for sharing credit card with friends' link="https://farmako.in" timeline='DEC 2021 - JAN 2022' />
+                <ExperienceItem org='Farmako Healthcare (YC S20)' position='SDE INTERN' skills={["flutter", "go"]} info='Worked on Clinic and Digital Lab Apps' link="https://farmako.in" timeline='JUN 2021 - MAR 2022' />
             </div>
 
             {/* <div className='w-full h-14 object-contain'>

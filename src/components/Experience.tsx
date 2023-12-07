@@ -9,12 +9,12 @@ const Experience = () => {
 
             <div className='h-5'></div>
             <div className='w-full flex items-center justify-center'>
-                <h1 className='text-7xl px-8 absolute text-white' >EXPERIENCE</h1>
+                <h1 className='text-7xl px-8 absolute text-white text-opacity-40' >EXPERIENCE</h1>
                 <img className=' top-0 w-1/2' src={require('../assets/sissu2.jpg')} alt="" />
             </div>
             <div className='py-2 items-stretch'></div>
 
-            <div className='grid-cols-3 grid my-7 px-8'>
+            <div className='grid-cols-3 grid my-7 px-8 gap-10'>
                 <ExperienceItem org='Equal' position='SDE-1' skills={["flutter", "java"]} info='Worked on Equal Identity Gateway' link="https://www.equal.in/" timeline='SEP 2023 - PRESENT' />
                 <ExperienceItem org='Emint 1729' position='SDE-1' skills={["flutter",]} info='Worked on Emint mobile application and Main website' link="https://www.emint.co.in/" timeline='DEC 2022 - AUG 2023' />
                 <ExperienceItem org='Kindly Health (YC W22)' position='SDE INTERN' skills={["flutter", "react",]} info='Worked on KindlyHis mobile application' link="https://www.kindlyhealth.com/" timeline='OCT 2022 - DEC 2022' />

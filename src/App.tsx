@@ -37,12 +37,21 @@ function App() {
           </div>
         </div> */}
 
-
-        {/* <AnimTest /> */}
-
-        <button className='bg-blue-500 h-16 w-72' onClick={() => {
+        {/* <button className='bg-blue-500 h-16 w-72' onClick={() => {
           setDevice(!device)
-        }} />
+        }}>
+          change
+        </button> */}
+
+
+        <div className='flex flex-col gap-8 w-full h-screen items-end justify-center fixed '>
+          <div className={`${device ? 'w-1/2' : 'w-full'} h-full flex flex-col gap-8 items-center justify-center transition-all duration-1000`}>
+            <MacToMobile device={device} />
+            <div className='text-black opacity-50 flex text-center'>
+              Created by AmSrik
+            </div>
+          </div>
+        </div>
 
         <Swiper
           ref={sliderRef}
@@ -59,26 +68,44 @@ function App() {
             } else {
               setBgColor(true)
             }
+
+            // if ((sliderRef.current?.swiper.activeIndex ?? 0) > 1) {
+            //   setDevice(!device);
+            // } else {
+            //   setDevice(!device);
+            // }
+
           }}
-          onActiveIndexChange={(e) => { }}
+          onActiveIndexChange={(e) => {
+            console.log(e.activeIndex)
+            if ((e.activeIndex ?? 0) > 0) {
+              setDevice(true);
+            } else {
+              setDevice(false);
+            }
+
+          }}
           modules={[Mousewheel]}
           className="mySwiper"
         >
 
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <div className='flex flex-col gap-8 h-screen w-screen items-center justify-center sticky'>
               <MacToMobile device={device} />
               <div className='text-black opacity-50'>
                 Create by AmSrik
               </div>
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide>
+            <div className='h-screen w-screen' />
+          </SwiperSlide>
+          {/* <SwiperSlide>
             <Main />
-          </SwiperSlide>
-          <SwiperSlide>
+          </SwiperSlide> */}
+          {/* <SwiperSlide>
             <About />
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide>
             <Skills />
           </SwiperSlide>

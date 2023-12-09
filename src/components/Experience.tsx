@@ -4,7 +4,7 @@ import Skills from './Skills';
 
 const Experience = () => {
     return (
-        <div id='experience' className='w-full md:h-screen items-center grid-cols-1 py-8'>
+        <div id='experience' className='w-1/2 md:h-screen items-center grid-cols-1 py-8'>
             <div className='h-20'></div>
 
             <div className='h-5'></div>

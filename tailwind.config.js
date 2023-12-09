@@ -9,6 +9,7 @@ module.exports = {
       'mac-finder': "url('https://upload.wikimedia.org/wikipedia/en/9/98/FinderBigSur.png')",
       'mac-safari': "url('https://icons.iconarchive.com/icons/johanchalibert/mac-osx-yosemite/512/safari-icon.png')",
       'mac-xcode': "url('https://developer.apple.com/assets/elements/icons/xcode/xcode-128x128_2x.png')",
+      'lines':"url('https://img.freepik.com/premium-vector/abstract-wave-line-art-background_144721-1801.jpg?w=2000')"
       // 'mac-finder': "url('https://upload.wikimedia.org/wikipedia/en/9/98/FinderBigSur.png')",
     },
     extend: {

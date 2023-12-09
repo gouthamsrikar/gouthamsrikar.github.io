@@ -9,18 +9,18 @@ const MacToMobile = (props: MacToMobileProps) => {
 
 
     return (
-        <div className={`group h-2/3 ${props.device ? 'w-[17rem] rounded-3xl border-4' : 'w-2/3 border-8 rounded-3xl'} flex flex-col items-center justify-start bg-white transition-all duration-500 border-black bg-mac-wall bg-cover shadow-2xl shadow-black`}>
+        <div className={`group h-2/3 ${props.device ? 'w-[17rem] rounded-3xl border-4 shadow-2xl shadow-black' : 'w-2/3 border-8 rounded-3xl shadow-xl shadow-[#00000060]'} flex flex-col items-center justify-start bg-white transition-all duration-500 border-black bg-mac-wall bg-cover shadow-2xl `}>
             <div className={`${props.device ? 'w-24 rounded-full my-2' : 'w-32 rounded-none rounded-b-xl my-0'} bg-black flex items-center justify-end h-5 transition-all duration-200`}>
-                <div className={`${props.device ? 'hidden' : 'inline'} h-1 w-1 bg-green-400 rounded-full mx-2`}>
+                <div className={`${!props.device ? 'hidden' : 'inline'} h-1 w-1 bg-green-400 rounded-full mx-2`}>
 
                 </div>
             </div>
             <div className={`flex flex-col h-full items-center justify-center text-2xl text-black opacity-40`}>
-                <div className={`text-center transition-all hidden group-hover:inline-flex `}>
-                    i - Mac
-                </div>
-                <div className={`text-center transition-all group-hover:hidden `}>
-                    i - Phone
+
+                <div className={`text-center transition-all`}>
+                    {props.device ? 'i - Phone' : <h1 className=''>
+                        Hi, I&apos;m <span>Goutham</span>
+                    </h1>}
                 </div>
             </div>
 

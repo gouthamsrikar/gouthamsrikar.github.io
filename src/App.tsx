@@ -12,24 +12,37 @@ import "swiper/css";
 
 // import required modules
 import { Mousewheel, Pagination } from "swiper";
+import MacToMobile from './components/mobile_to_mac';
+import AnimTest from './components/AnimTest';
 function App() {
 
   const sliderRef = useRef<SwiperCore.SwiperRef>(null);
 
   const [bgColor, setBgColor] = useState(true)
 
+  const [device, setDevice] = useState<boolean>(false);
 
 
   return (
     <div className="App">
-      <div className='h-full w-full bg-white font-Grot' >
-        <NavBar onchange={(i) => {
+      <div className='h-full w-fulll bg-white font-Grot items-center' >
+        {/* <NavBar onchange={(i) => {
           sliderRef.current?.swiper.slideTo(i)
+        }} /> */}
+
+        {/* <div className='flex flex-col gap-8 h-screen w-screen items-center justify-center'>
+          <MacToMobile />
+          <div className='text-black opacity-50'>
+            Create by AmSrik
+          </div>
+        </div> */}
+
+
+        {/* <AnimTest /> */}
+
+        <button className='bg-blue-500 h-16 w-72' onClick={() => {
+          setDevice(!device)
         }} />
-        {/* <Main />
-            <About /> */}
-
-
 
         <Swiper
           ref={sliderRef}
@@ -51,6 +64,15 @@ function App() {
           modules={[Mousewheel]}
           className="mySwiper"
         >
+
+          <SwiperSlide>
+            <div className='flex flex-col gap-8 h-screen w-screen items-center justify-center sticky'>
+              <MacToMobile device={device} />
+              <div className='text-black opacity-50'>
+                Create by AmSrik
+              </div>
+            </div>
+          </SwiperSlide>
           <SwiperSlide>
             <Main />
           </SwiperSlide>

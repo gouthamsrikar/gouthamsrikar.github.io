@@ -3,8 +3,6 @@ import React from 'react'
 const Main = () => {
     return (
         <div className='w-full h-screen items-center grid-cols-1 '>
-
-
             <div className='max-w-[1240px] w-full h-[50%] mx-auto p-2 flex justify-center items-center'>
                 <div >
                     <p className='uppercase  tracking-widest text-xl'>BUILDING SOMETHING PEOPLE WANT</p>

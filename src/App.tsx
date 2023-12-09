@@ -13,12 +13,15 @@ import "swiper/css";
 // import required modules
 import { Mousewheel, Pagination } from "swiper";
 import MacToMobile from './components/mobile_to_mac';
-import AnimTest from './components/AnimTest';
+import Profile from './widget/Profile';
 function App() {
 
   const sliderRef = useRef<SwiperCore.SwiperRef>(null);
 
   const [bgColor, setBgColor] = useState(true)
+
+  const [index, setIndex] = useState(0)
+
 
   const [device, setDevice] = useState<boolean>(false);
 
@@ -30,23 +33,10 @@ function App() {
           sliderRef.current?.swiper.slideTo(i)
         }} /> */}
 
-        {/* <div className='flex flex-col gap-8 h-screen w-screen items-center justify-center'>
-          <MacToMobile />
-          <div className='text-black opacity-50'>
-            Create by AmSrik
-          </div>
-        </div> */}
-
-        {/* <button className='bg-blue-500 h-16 w-72' onClick={() => {
-          setDevice(!device)
-        }}>
-          change
-        </button> */}
-
 
         <div className='flex flex-col gap-8 w-full h-screen items-end justify-center fixed '>
           <div className={`${device ? 'w-1/2' : 'w-full'} h-full flex flex-col gap-8 items-center justify-center transition-all duration-1000`}>
-            <MacToMobile device={device} />
+            <MacToMobile device={device} index={index} />
             <div className='text-black opacity-50 flex text-center'>
               Created by AmSrik
             </div>
@@ -78,6 +68,7 @@ function App() {
           }}
           onActiveIndexChange={(e) => {
             console.log(e.activeIndex)
+            setIndex(e.activeIndex)
             if ((e.activeIndex ?? 0) > 0) {
               setDevice(true);
             } else {

@@ -4,17 +4,11 @@ import Skills from './Skills';
 
 const Experience = () => {
     return (
-        <div id='experience' className='w-1/2 md:h-screen items-center grid-cols-1 py-8'>
-            <div className='h-20'></div>
+        <div id='experience' className='w-1/2 h-screen items-start justify-center flex flex-col gap-10 mx-14'>
 
-            <div className='h-5'></div>
-            <div className='w-full flex items-center justify-center'>
-                <h1 className='text-7xl px-8 absolute text-white text-opacity-40' >EXPERIENCE</h1>
-                <img className=' top-0 w-1/2' src={require('../assets/sissu2.jpg')} alt="" />
-            </div>
-            <div className='py-2 items-stretch'></div>
+            <h1 className='text-7xl text-black' >EXPERIENCE</h1>
 
-            <div className='grid-cols-3 grid my-7 px-8 gap-10'>
+            <div className='grid-cols-3 grid gap-10'>
                 <ExperienceItem org='Equal' position='SDE-1' skills={["flutter", "java"]} info='Worked on Equal Identity Gateway' link="https://www.equal.in/" timeline='SEP 2023 - PRESENT' />
                 <ExperienceItem org='Emint 1729' position='SDE-1' skills={["flutter",]} info='Worked on Emint mobile application and Main website' link="https://www.emint.co.in/" timeline='DEC 2022 - AUG 2023' />
                 <ExperienceItem org='Kindly Health (YC W22)' position='SDE INTERN' skills={["flutter", "react",]} info='Worked on KindlyHis mobile application' link="https://www.kindlyhealth.com/" timeline='OCT 2022 - DEC 2022' />
@@ -22,12 +16,6 @@ const Experience = () => {
                 <ExperienceItem org='Credito' position='SDE INTERN' skills={["flutter", "firebase", "go"]} info='Developed the MVP credito app for sharing credit card with friends' link="https://farmako.in" timeline='DEC 2021 - JAN 2022' />
                 <ExperienceItem org='Farmako Healthcare (YC S20)' position='SDE INTERN' skills={["flutter", "go"]} info='Worked on Clinic and Digital Lab Apps' link="https://farmako.in" timeline='JUN 2021 - MAR 2022' />
             </div>
-
-            {/* <div className='w-full h-14 object-contain'>
-            </div> */}
-            {/* <img className=' top-0 h-14' src={require('../assets/sissu2.jpg')} alt="" /> */}
-
-
         </div>
     )
 }

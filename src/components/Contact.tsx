@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Contact = () => {
     return (
-        <div id='contact' className="pl-8 pt-80 h-screen place-content-end md:flex col-auto md:justify-around">
+        <div id='contact' className="pl-8 pt-80 h-screen flex flex-col  mx-14">
             <div >
                 <h1 className='text-2xl'>Let&apos;s Connect</h1>
                 <div className='flex items-center justify-between my-2 w-[100px]'>
@@ -43,7 +43,6 @@ const Contact = () => {
 
 
 
-            <img className='md:h-[100%] md:relative absolute bg-contain' src="https://cdna.artstation.com/p/assets/images/images/056/448/920/large/goutham-srikar-asset.jpg?1669263125" alt="" />
 
         </div>
     )

@@ -5,8 +5,7 @@ import { SiFlutter, SiDart, SiReact, SiTailwindcss, SiCplusplus, SiGo, SiGit, Si
 
 const Skills = () => {
     return (
-        <div id='skills' className="items-center px-8 justify-between md:h-screen w-1/2">  
-            <div className='h-20'></div>
+        <div id='skills' className="items-start mx-14 justify-center flex flex-col h-screen gap-10 w-1/2">  
             <h1 className='pr-6 text-7xl'>SKILLS</h1 >
             <div className='w-[100%] '>
                 <div className='md:flex justify-between'>

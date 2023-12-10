@@ -14,6 +14,28 @@ import "swiper/css";
 import { Mousewheel, Pagination } from "swiper";
 import MacToMobile from './components/mobile_to_mac';
 import Profile from './widget/Profile';
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics, logEvent } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBEbbKOLGODxSXYnxbIG9hpQqYGmJ18Fcs",
+  authDomain: "gouthamsrikar-github-io.firebaseapp.com",
+  projectId: "gouthamsrikar-github-io",
+  storageBucket: "gouthamsrikar-github-io.appspot.com",
+  messagingSenderId: "978638403419",
+  appId: "1:978638403419:web:c4e7f321e621fde759cc7e",
+  measurementId: "G-Q1EQ20P9XN"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 function App() {
 
   const sliderRef = useRef<SwiperCore.SwiperRef>(null);
@@ -25,9 +47,46 @@ function App() {
 
   const [device, setDevice] = useState<boolean>(false);
 
+  const eventMap =
+    new Map<number, string>([
+      [0, 're_visited'],
+      [1, 'skills'],
+      [2, 'experience'],
+      [3, 'contact']
+      ,],)
+
+
+
+
+
+  useEffect(() => {
+
+    // fetch('https://geolocation-db.com/json/')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     logEvent(analytics, "visited", {
+    //       'ip_address': data.IPv4,
+    //       'country_name': data.country_name,
+    //       'latitude': data.latitude,
+    //       'longitude': data.longitude
+    //     })
+    //   })
+    //   .catch(error => {
+    //     logEvent(analytics, "visited",)
+    //   })
+
+    logEvent(analytics, "visited",)
+
+
+  })
+
+
 
   return (
-    <div className="App">
+
+
+
+    < div className="App" >
       <div className='h-full w-fulll bg-white font-Grot items-center' >
         {/* <NavBar onchange={(i) => {
           sliderRef.current?.swiper.slideTo(i)
@@ -69,6 +128,7 @@ function App() {
           onActiveIndexChange={(e) => {
             console.log(e.activeIndex)
             setIndex(e.activeIndex)
+            logEvent(analytics, e.activeIndex === 0 ? 're_visited' : e.activeIndex === 1 ? 'skills' : e.activeIndex === 2 ? 'experience' : 'contact')
             if ((e.activeIndex ?? 0) > 0) {
               setDevice(true);
             } else {
@@ -109,7 +169,7 @@ function App() {
         </Swiper>
       </div>
 
-    </div>
+    </div >
   );
 }
 

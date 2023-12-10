@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 
 
+// Import the functions you need from the SDKs you need
+
+
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

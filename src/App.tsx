@@ -97,7 +97,7 @@ function App() {
           <div className={`${device ? 'w-1/2' : 'w-full'} h-full flex flex-col gap-8 items-center justify-center transition-all duration-1000`}>
             <MacToMobile device={device} index={index} />
             <div className='text-black opacity-50 flex text-center'>
-              Created by AmSrik
+              Created by Goutham srikar
             </div>
           </div>
         </div>

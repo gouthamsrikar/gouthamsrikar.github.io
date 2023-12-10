@@ -22,7 +22,7 @@ interface AppIconProps {
 
 const AppIcon = (props: AppIconProps) => {
     return (
-        <div className={`h-12 aspect-square rounded-lg bg-[#00000020] bg-cover ${props.bg}`}>
+        <div className={`h-12 aspect-square rounded-lg bg-[#00000020] bg-cover ${props.bg}`} onClick={()=>{}}>
 
         </div>
     )

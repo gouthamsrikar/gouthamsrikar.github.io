@@ -24,10 +24,10 @@ const MacToMobile = (props: MacToMobileProps) => {
 
     return (
         <div ref={frameRef} className={`h-2/3 ${props.device ? 'w-[17rem] rounded-3xl border-4 shadow-2xl shadow-black' : 'w-2/3 border-8 rounded-3xl shadow-xl shadow-[#00000060]'} flex flex-col items-center justify-start bg-white transition-all duration-500 border-black bg-mac-wall bg-cover shadow-2xl `}>
-            <div className={`${props.device ? 'w-24 rounded-full my-2' : 'w-32 rounded-none rounded-b-xl my-0'} bg-black flex items-center justify-end h-5 transition-all duration-200`}>
+            <div className={`${props.device ? 'w-24 rounded-full my-2' : 'w-32 rounded-none rounded-b-xl my-0'} fixed z-10 bg-black flex items-center justify-end h-5 transition-all duration-200`}>
                 <div className={`${!props.device ? 'hidden' : 'inline'} h-1 w-1 bg-green-400 rounded-full mx-2`} />
             </div>
-            <div className={`flex flex-col w-full transition-all h-full items-center justify-center text-2xl text-black overflow-hidden`}>
+            <div className={`flex flex-col w-full transition-all h-full items-center justify-center text-2xl text-black overflow-hidden z-0`}>
 
                 <Swiper
                     ref={sliderRef}

@@ -36,6 +36,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
+function publishFirebaseEvent(event: string) {
+  if (process.env.NODE_ENV === 'production') { logEvent(analytics, event) }
+  else {
+    logEvent(analytics, 'debug_' + event)
+  }
+}
+
 function App() {
 
   const sliderRef = useRef<SwiperCore.SwiperRef>(null);
@@ -75,7 +82,7 @@ function App() {
     //     logEvent(analytics, "visited",)
     //   })
 
-    logEvent(analytics, "visited",)
+    publishFirebaseEvent("visited",)
 
 
   })
@@ -128,7 +135,7 @@ function App() {
           onActiveIndexChange={(e) => {
             console.log(e.activeIndex)
             setIndex(e.activeIndex)
-            logEvent(analytics, e.activeIndex === 0 ? 're_visited' : e.activeIndex === 1 ? 'skills' : e.activeIndex === 2 ? 'experience' : 'contact')
+            publishFirebaseEvent(e.activeIndex === 0 ? 're_visited' : e.activeIndex === 1 ? 'skills' : e.activeIndex === 2 ? 'experience' : 'contact')
             if ((e.activeIndex ?? 0) > 0) {
               setDevice(true);
             } else {

@@ -50,12 +50,12 @@ const MacToMobile = (props: MacToMobileProps) => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='h-full flex flex-col items-center justify-end '>
+                        <div className='h-full flex flex-col items-center justify-center '>
                             <AppGrid expanded={props.index === 1} bg={['bg-flutter', 'bg-dart', 'bg-golang', 'bg-cpp', 'bg-typescript', 'bg-next', 'bg-tailwind', 'bg-git',]} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='h-full flex flex-col items-center justify-end '>
+                        <div className='h-full flex flex-col items-center justify-center '>
                             <AppGrid expanded={props.index === 2} bg={['bg-farmako', 'bg-tezsure', 'bg-kindly', 'bg-emint', '', '', '']} />
                         </div>
 

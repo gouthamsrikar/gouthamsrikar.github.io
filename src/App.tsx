@@ -1,11 +1,8 @@
 import React, { useRef } from 'react';
-import About from './components/About';
-import Main from './components/Main';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
-import NavBar from './components/NavBar';
-import SwiperCore, { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { useState, useEffect } from 'react';
 // Import Swiper styles
 import "swiper/css";
@@ -13,7 +10,6 @@ import "swiper/css";
 // import required modules
 import { Mousewheel, Pagination } from "swiper";
 import MacToMobile from './components/mobile_to_mac';
-import Profile from './widget/Profile';
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics, logEvent } from "firebase/analytics";
@@ -45,7 +41,7 @@ function publishFirebaseEvent(event: string) {
 
 function App() {
 
-  const sliderRef = useRef<SwiperCore.SwiperRef>(null);
+  const sliderRef = useRef<SwiperRef>(null);
 
   const [bgColor, setBgColor] = useState(true)
 
